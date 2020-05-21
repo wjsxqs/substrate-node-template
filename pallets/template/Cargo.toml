@@ -2,30 +2,23 @@
 authors = ['Anonymous']
 edition = '2018'
 name = 'pallet-template'
-version = '2.0.0-alpha.5'
+version = '2.0.0-alpha.8'
 
 [dependencies]
-serde = { version = "1.0.101", optional = true }
 codec = { package = "parity-scale-codec", version = "1.2.0", default-features = false, features = ["derive"] }
-safe-mix = { default-features = false, version = '1.0.0' }
-sp-std = { version = "2.0.0-alpha.5", default-features = false }
-sp-io = { version = "2.0.0-alpha.5", default-features = false }
-sp-core = { version = "2.0.0-alpha.5", default-features = false }
-sp-runtime = { version = "2.0.0-alpha.5", default-features = false }
-frame-support = { version = "2.0.0-alpha.5", default-features = false }
-frame-system = { version = "2.0.0-alpha.5", default-features = false }
+frame-support = { version = "2.0.0-alpha.8", default-features = false }
+frame-system = { version = "2.0.0-alpha.8", default-features = false }
+
+[dev-dependencies]
+sp-io = { version = "2.0.0-alpha.8", default-features = false }
+sp-core = { version = "2.0.0-alpha.8", default-features = false }
+sp-runtime = { version = "2.0.0-alpha.8", default-features = false }
 
 
 [features]
 default = ['std']
 std = [
-    'serde',
     'codec/std',
-    'sp-std/std',
-    'sp-core/std',
     'frame-support/std',
-    'frame-system/std',
-    'safe-mix/std',
-    'sp-io/std',
-    'sp-runtime/std'
+    'frame-system/std'
 ]
